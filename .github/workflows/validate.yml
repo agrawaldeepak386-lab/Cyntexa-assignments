@@ -17,4 +17,5 @@ jobs:
         uses: databricks/setup-cli@main
 
       - name: Validate bundle
+        working-directory: ./Day_9_Assignment/Day_9_vs
         run: databricks bundle validate -t dev
