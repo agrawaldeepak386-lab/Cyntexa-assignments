@@ -42,20 +42,11 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
-    # GitHub Environment
-    environment: prod
-
-    # Required for GitHub OIDC
-    permissions:
-      id-token: write
-      contents: read
-
+  
     env:
-      # Databricks OIDC authentication
-      DATABRICKS_AUTH_TYPE: github-oidc
       DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
       DATABRICKS_CLIENT_ID: ${{ vars.DATABRICKS_CLIENT_ID }}
-
+      DATABRICKS_CLIENT_SECRET: ${{ vars.DATABRICKS_CLIENT_SECRET }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
