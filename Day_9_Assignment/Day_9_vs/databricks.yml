@@ -42,7 +42,8 @@ targets:
       catalog: dev
       schema: prod
     permissions:
-      - user_name: agrawaldeepak386@gmail.com
-        level: CAN_MANAGE
       - service_principal_name: 78a44d48-482f-4806-8320-11c7e45abe31
         level: CAN_MANAGE
+      - user_name: agrawaldeepak386@gmail.com
+        level: CAN_MANAGE
+      
